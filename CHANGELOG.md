@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/CorentinTh/oggen/compare/v1.0.1...v1.1.0) (2022-08-18)
+
+
+### Features
+
+* **generator:** omit empty string as value ([98d07a0](https://github.com/CorentinTh/oggen/commit/98d07a0ce34d13f5b84ef16c1b37bf14e19b1c33))
+
 ### [1.0.1](https://github.com/CorentinTh/oggen/compare/v1.0.0...v1.0.1) (2022-08-18)
 
 

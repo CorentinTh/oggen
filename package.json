@@ -1,6 +1,6 @@
 {
   "name": "@it-tools/oggen",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Simple open graph meta generator",
   "keywords": [
     "open",
