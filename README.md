@@ -1,6 +1,10 @@
 # OGGEN - OpenGraph metadata generator
 
 [![ci](https://github.com/CorentinTh/oggen/actions/workflows/ci.yml/badge.svg)](https://github.com/CorentinTh/oggen/actions/workflows/ci.yml)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@it-tools/oggen.svg)](https://www.npmjs.com/package/@it-tools/oggen)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/CorentinTh/oggen.svg)](https://github.com/CorentinTh/oggen/blob/main/package.json)
+[![Dependencies](https://img.shields.io/badge/dependencies-0-green)](https://www.npmjs.com/package/@it-tools/oggen)
+[![Licence Badge](https://img.shields.io/github/license/CorentinTh/oggen.svg)](LICENCE)
 
 > Dynamically generate your open-graph metadata for your html files (with typescript support).
 
