@@ -59,7 +59,7 @@ function getMetaTagsAndValue({
 
     if (isObject(value)) {
       collector = { ...collector, ...getMetaTagsAndValue({ rawMetadata: value as MetadataConfig, prefix: prefixedKey, prefixSeparator }) };
-    } else {
+    } else if (value /* prevent null/undefined/empty string */) {
       collector = { ...collector, [prefixedKey]: value };
     }
   }

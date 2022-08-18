@@ -9,6 +9,10 @@ describe('generators', () => {
       );
     });
 
+    it('omit empty string as value', () => {
+      expect(generateMeta({ title: '' })).to.eql('');
+    });
+
     it('can handle extra twitter conf', () => {
       expect(generateMeta({ title: 'it-tools', description: 'Lorem ipsum', twitter: { title: 'it-tools twitter' } }, { generateTwitterCompatibleMeta: true })).to.eql(
         [
