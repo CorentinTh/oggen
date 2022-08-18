@@ -21,6 +21,7 @@ describe('utils', () => {
       expect(toSnakeCase('helloWorld')).to.eql('hello_world');
       expect(toSnakeCase('URLStuff')).to.eql('url_stuff');
       expect(toSnakeCase('myURL')).to.eql('my_url');
+      expect(toSnakeCase('a:b')).to.eql('a:b');
       expect(toSnakeCase('')).to.eql('');
     });
   });
