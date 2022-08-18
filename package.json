@@ -1,0 +1,58 @@
+{
+  "name": "@it-tools/oggen",
+  "version": "1.0.0",
+  "description": "Simple open graph meta generator",
+  "keywords": [
+    "open",
+    "graph",
+    "generator",
+    "meta",
+    "social",
+    "share",
+    "web",
+    "html",
+    "twitter",
+    "og"
+  ],
+  "funding": "https://github.com/sponsors/CorentinTh",
+  "author": "Corentin Th <corentin.thomasset74+npm@gmail.com> (https://github.com/CorentinTh)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CorentinTh/oggen"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vitest dev",
+    "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
+    "prepack": "unbuild",
+    "release": "standard-version",
+    "test": "vitest"
+  },
+  "private": false,
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.8.8",
+    "vitest": "^0.22.1"
+  }
+}
