@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/CorentinTh/oggen/compare/v1.0.0...v1.0.1) (2022-08-18)
+
+
+### Documentation
+
+* updated badges ([920ab1a](https://github.com/CorentinTh/oggen/commit/920ab1acb7a451eda0ea48a0ee1c065733763d6f))
+
 ## 1.0.0 (2022-08-18)
 
 
