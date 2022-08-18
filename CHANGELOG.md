@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/CorentinTh/oggen/compare/v1.1.0...v1.1.1) (2022-08-18)
+
+
+### Bug Fixes
+
+* toSnake allows double dot ([94c9428](https://github.com/CorentinTh/oggen/commit/94c94288cc0148fac69316178fa60203ebfbed96))
+
 ## [1.1.0](https://github.com/CorentinTh/oggen/compare/v1.0.1...v1.1.0) (2022-08-18)
 
 
