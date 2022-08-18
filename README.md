@@ -93,6 +93,7 @@ You can put your extra twitter thing under the `twitter` key
 const metadata = generateMeta(
   {
     title: 'IT-Tools',
+    description: 'Lorem ipsum',
     twitter: {
       title: 'Title for twitter',
       card: 'summary_large_image',
@@ -113,7 +114,7 @@ console.log(metadata);
 
 <!-- twitter meta -->
 <meta name="twitter:title" value="Title for twitter" />
-<meta name="twitter:description" value="Lorem ipsum" />
+<meta name="twitter:description" value="Lorem ipsum" />   // <-- present because of 'generateTwitterCompatibleMeta'
 <meta name="twitter:card" value="summary_large_image" />
 
 */
