@@ -14,10 +14,10 @@ interface MetaName extends MetaBase {
 
 type Meta = MetaName | MetaProperty;
 
-function metaToString({ metaName, metaValue, type }: { metaName: string; metaValue: MetadataValue; type: string }) {
-  return `<meta ${type.trim()}="${metaName.trim()}" value="${metaValue.toString().trim()}" />`;
+function metaToString({ metaName, metaValue, type }: { metaName: string; metaValue: MetadataValue | MetadataValue[]; type: string }) {
+  return [metaValue].flat().map((value) => `<meta ${type.trim()}="${metaName.trim()}" value="${value.toString().trim()}" />`);
 }
 
 function buildMetaStrings({ meta, type }: { meta: MetadataFlat; type: string }) {
-  return Object.entries(meta).map(([metaName, metaValue]) => metaToString({ metaName, metaValue, type }));
+  return Object.entries(meta).flatMap(([metaName, metaValue]) => metaToString({ metaName, metaValue, type }));
 }

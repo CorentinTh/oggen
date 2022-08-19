@@ -13,6 +13,12 @@ describe('generators', () => {
       expect(generateMeta({ title: '' })).to.eql('');
     });
 
+    it('handle array of values', () => {
+      expect(generateMeta({ movie: { author: ['Jane Mi', 'John Do'] } })).to.eql(
+        '<!-- og meta -->\n<meta property="og:movie:author" value="Jane Mi" />\n<meta property="og:movie:author" value="John Do" />',
+      );
+    });
+
     it('can handle extra twitter conf', () => {
       expect(generateMeta({ title: 'it-tools', description: 'Lorem ipsum', twitter: { title: 'it-tools twitter' } }, { generateTwitterCompatibleMeta: true })).to.eql(
         [

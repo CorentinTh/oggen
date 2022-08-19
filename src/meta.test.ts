@@ -10,5 +10,12 @@ describe('meta', () => {
       };
       expect(buildMetaStrings({ meta, type: 'property' })).to.eql(['<meta property="og:title" value="Lorem ipsum" />', '<meta property="og:description" value="Dolor sit" />']);
     });
+
+    it('handles value array', () => {
+      const meta = {
+        'og:title': ['Lorem ipsum', 'Dolor sit'],
+      };
+      expect(buildMetaStrings({ meta, type: 'property' })).to.eql(['<meta property="og:title" value="Lorem ipsum" />', '<meta property="og:title" value="Dolor sit" />']);
+    });
   });
 });

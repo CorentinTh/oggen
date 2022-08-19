@@ -89,6 +89,26 @@ console.log(metadata);
 
 Please refer to [ogp.me](https://ogp.me/) for the metadata semantic
 
+### Arrays
+
+It support array of data
+
+```typescript
+const metadata = generateMeta({
+  book: { author: ['Person 1', 'Person 2'] },
+});
+
+console.log(metadata);
+
+/*
+
+<!-- og meta -->
+<meta property="og:book:author" value="Person 1" />
+<meta property="og:book:author" value="Person 2" />
+
+*/
+```
+
 ### Twitter
 
 You can put your extra twitter thing under the `twitter` key
