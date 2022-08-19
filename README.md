@@ -95,7 +95,13 @@ It support array of data
 
 ```typescript
 const metadata = generateMeta({
-  book: { author: ['Person 1', 'Person 2'] },
+  music: {
+    author: [
+      { name: 'Person 1 ', city: 'London' },
+      { name: 'Person 2', city: 'Paris' },
+    ],
+    tags: ['Tag 1', 'Tag 2'],
+  },
 });
 
 console.log(metadata);
@@ -103,8 +109,12 @@ console.log(metadata);
 /*
 
 <!-- og meta -->
-<meta property="og:book:author" value="Person 1" />
-<meta property="og:book:author" value="Person 2" />
+<meta property="og:music:author:name" value="Person 1" />
+<meta property="og:music:author:city" value="London" />
+<meta property="og:music:author:name" value="Person 2" />
+<meta property="og:music:author:city" value="Paris" />
+<meta property="og:music:tags" value="Tag 1" />
+<meta property="og:music:tags" value="Tag 2" />
 
 */
 ```

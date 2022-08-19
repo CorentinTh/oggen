@@ -2,7 +2,7 @@ import { MetadataFlat } from './types';
 
 export { pickTwitterCompatibleMetadata };
 
-const twitterCompatibility = {
+const twitterCompatibility: Record<string, string> = {
   'og:description': 'twitter:description',
   'og:title': 'twitter:title',
   'og:image': 'twitter:image',
@@ -10,12 +10,8 @@ const twitterCompatibility = {
   'og:image:alt': 'twitter:image:alt',
 };
 
-function pickTwitterCompatibleMetadata({ meta }: { meta: MetadataFlat }): MetadataFlat {
-  return {
-    ...Object.fromEntries(
-      Object.entries(meta)
-        .map(([k, v]) => [twitterCompatibility[k as keyof typeof twitterCompatibility], v])
-        .filter(([k]) => k),
-    ),
-  };
+function pickTwitterCompatibleMetadata({ existingMeta, twitterMeta }: { existingMeta: MetadataFlat[]; twitterMeta: MetadataFlat[] }): MetadataFlat[] {
+  return existingMeta
+    .filter(({ key }) => key in twitterCompatibility && twitterMeta.find((tm) => tm.key === twitterCompatibility[key]) === undefined)
+    .map(({ key, value }) => ({ key: twitterCompatibility[key] ?? key, value }));
 }

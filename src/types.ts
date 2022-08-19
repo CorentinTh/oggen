@@ -7,5 +7,6 @@ interface MetadataConfig {
 }
 
 interface MetadataFlat {
-  [key: string]: MetadataValue | MetadataValue[];
+  key: string;
+  value: string;
 }

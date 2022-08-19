@@ -1,6 +1,6 @@
 export { isObject, toSnakeCase };
 
-const isObject = (v: unknown) => typeof v === 'object' && !Array.isArray(v) && v !== null;
+const isObject = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && !Array.isArray(v) && v !== null && !(v instanceof Date);
 
 const toSnakeCase = (s: string) => s.split(':').map(toSnakeCaseStrict).join(':');
 

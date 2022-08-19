@@ -12,6 +12,7 @@ describe('utils', () => {
       expect(isObject([])).to.eql(false);
       expect(isObject(1)).to.eql(false);
       expect(isObject('df')).to.eql(false);
+      expect(isObject(new Date())).to.eql(false);
     });
   });
 
